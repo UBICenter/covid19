@@ -7,6 +7,8 @@
 \usepackage [autostyle, english = american]{csquotes}
 \MakeOuterQuote{"}
 
+\graphicspath{ {../charts/} }
+
 \renewcommand\theadalign{cc}
 \renewcommand\theadfont{\bfseries}
 \renewcommand\theadgape{\Gape[4pt]}
@@ -46,11 +48,24 @@
 \date{March 19, 2020}
 \maketitle
 \begin{abstract}
-\noindent Policymakers are increasingly considering universal basic income (UBI) as a response to the economic collapse caused by the Covid-19 coronavirus outbreak. Without fiscal policies aimed at low-income Americans, falling incomes are likely to increase the poverty rate. Using the 2018 Current Population Survey, I calculate the minimum UBI amount necessary to avoid a rise in the Supplemental Poverty Measure resulting from income drops. I find that a modest UBI could stabilize the poverty rate; for example, if incomes fall by 10 percent, a universal transfer of about \$850, totaling under \$300 billion, would suffice. Giving the UBI to everyone is a cheaper poverty stabilization approach than excluding children or noncitizens, which requires larger amounts per recipient; it is about a quarter cheaper in aggregate terms than limiting transfers to adult citizens.
+\noindent Policymakers are increasingly considering universal basic income (UBI)
+as a response to the economic collapse caused by the
+Covid-19 coronavirus outbreak. 
+Without fiscal policies aimed at low-income Americans,
+falling incomes are likely to increase the poverty rate.
+Using the 2018 Current Population Survey,
+I calculate the minimum UBI amount necessary to avoid a rise in the
+Supplemental Poverty Measure resulting from income drops.
+I find that a modest UBI could stabilize the poverty rate;
+for example, if incomes fall by 10 percent, 
+a universal transfer of about \$850, totaling under \$300 billion,
+would suffice.
+Giving the UBI to everyone is a cheaper poverty stabilization approach than 
+excluding children or noncitizens, which requires larger amounts per recipient;
+it is about a quarter cheaper in aggregate terms than
+limiting transfers to adult citizens.
 \vspace{1in}\\
-%\noindent\textbf{Keywords:} key1, key2, key3\\
 \vspace{0in}\\
-%\noindent\textbf{JEL Codes:} key1, key2, key3\\
 
 \bigskip
 \end{abstract}
@@ -67,7 +82,18 @@
 
 \section{Introduction} \label{sec:introduction}
 
-The Covid-19 coronavirus has wreaked havoc on the global economy. Between February 19 and March 19, 2020, the S\&P 500 index fell from a peak of 3,386 to 2,409, a 29 percent drop that effectively erased about three years of gains~\cite{sp500}. In the week of March 16, unemployment data from more than a dozen US states showed that claims were growing by a factor of 10 or more~\cite{robbins_2020}. Of economic experts in the University of Chicago Institute on Global Markets panel \citeyear{igm}, 51 percent agreed and 5 percent disagreed on March 12 that "Even if the mortality of COVID-19 proves to be limited (similar to the number of flu deaths in a regular season), it is likely to cause a major recession."
+The Covid-19 coronavirus has wreaked havoc on the global economy.
+Between February 19 and March 19, 2020,
+the S\&P 500 index fell from a peak of 3,386 to 2,409,
+a 29 percent drop that effectively erased about three years of 
+gains~\cite{sp500}.
+In the week of March 16, unemployment data from more than a dozen US states
+showed that claims were growing by a factor of 10 or more~\cite{robbins_2020}.
+Of economic experts in the University of Chicago Institute on Global Markets
+panel \citeyear{igm}, 51 percent agreed and 5 percent disagreed on March 12
+that "Even if the mortality of COVID-19 proves to be limited
+(similar to the number of flu deaths in a regular season),
+it is likely to cause a major recession."
 
 In addition to other measures like payroll tax cuts, paid sick leave, and assistance for airlines and small businesses, United States policymakers are now calling for UBIs---either as one-time or recurring payments, and sometimes including means tests---as policy responses to the crisis.
 
@@ -109,7 +135,7 @@ Children and non-citizens are more likely to be in poverty: 13.6 percent of chil
 If annual disposable incomes fell by 10 percent, the poverty rate would rise 25 percent; an additional 10.5 million people would be below the SPM poverty line.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/pov_rate_income.png}
+\includegraphics[width=15cm]{pov_rate_income.png}
 \captionof{figure}{}
 \label{fig:pov_rate_income}
 \end{center}
@@ -128,7 +154,7 @@ As this analysis considers the poverty rate, incomes near the poverty line are m
 When disposable incomes fall by 10 percent, the poverty rate rises from 12.7 percent to 15.9 percent. If a cash transfer is administered to everyone, reducing that rate back to 12.7 percent would require \$828 per person.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/pov_rate_by_ubi_10pct_all.png}
+\includegraphics[width=15cm]{pov_rate_by_ubi_10pct_all.png}
 \captionof{figure}{}
 \label{fig:pov_rate_by_ubi_10pct_all}
 \end{center}
@@ -136,7 +162,7 @@ When disposable incomes fall by 10 percent, the poverty rate rises from 12.7 per
 If only given to adult citizens, fewer households get the UBI (non-citizens don't), and some households get smaller amounts (those with children). That leaves households who would have been lifted out of poverty remaining below the line. Giving each adult citizen \$828 reduces poverty only to 14.1 percent; to bring it back to 12.7 percent requires \$1,515 per adult citizen.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/pov_rate_by_ubi_10pct_adult_citizens.png}
+\includegraphics[width=15cm]{pov_rate_by_ubi_10pct_adult_citizens.png}
 \captionof{figure}{}
 \label{fig:pov_rate_by_ubi_10pct_adult_citizens}
 \end{center}
@@ -144,7 +170,7 @@ If only given to adult citizens, fewer households get the UBI (non-citizens don'
 Similarly, stabilizing poverty requires higher payments when children are excluded, or when they only get half the amount as adults.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_pov_rate_10pct.png}
+\includegraphics[width=15cm]{ubi_pov_rate_10pct.png}
 \captionof{figure}{}
 \label{fig:ubi_pov_rate_10pct}
 \end{center}
@@ -154,7 +180,7 @@ Stabilizing poverty under a smaller UBI base requires giving larger payments to 
 In this case, it is not. An inclusive program is a considerably cheaper option to stabilize the poverty rate than one that targets particular segments of the population. The \$828 payment to everyone costs \$268 billion. That’s 23 percent less than the \$1,515 to adult citizens, which costs \$347 billion.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_cost_pov_rate_10pct.png}
+\includegraphics[width=15cm]{ubi_cost_pov_rate_10pct.png}
 \captionof{figure}{}
 \label{fig:ubi_cost_pov_rate_10pct}
 \end{center}
@@ -164,7 +190,7 @@ In this case, it is not. An inclusive program is a considerably cheaper option t
 In the case of a 10 percent income loss, providing a UBI to everyone requires a payment of about 45 percent less than providing it only to adult citizens. That ratio roughly holds throughout the spectrum of potential income losses.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_pov_rate.png}
+\includegraphics[width=15cm]{ubi_pov_rate.png}
 \captionof{figure}{}
 \label{fig:ubi_pov_rate}
 \end{center}
@@ -172,7 +198,7 @@ In the case of a 10 percent income loss, providing a UBI to everyone requires a 
 Giving to everyone is the cheapest modeled approach to stabilizing poverty, regardless of the fall in income, and in general broader transfers make poverty stabilization cheaper.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_cost_pov_rate.png}
+\includegraphics[width=15cm]{ubi_cost_pov_rate.png}
 \captionof{figure}{}
 \label{fig:ubi_cost_pov_rate}
 \end{center}
@@ -207,7 +233,7 @@ The 2018 SPM poverty gap is \$170 billion; that is, among the 12.7 percent of pe
 If annual disposable incomes fell by 10 percent, the poverty gap would rise 14 percent.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/pov_gap_income.png}
+\includegraphics[width=15cm]{pov_gap_income.png}
 \captionof{figure}{}
 \label{fig:pov_gap_income}
 \end{center}
@@ -215,7 +241,7 @@ If annual disposable incomes fell by 10 percent, the poverty gap would rise 14 p
 Given 10 percent income losses, the UBI amount needed to stabilize the poverty gap is about a third lower than the UBI amount needed to stabilize the poverty rate.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_pov_gap_10pct.png}
+\includegraphics[width=15cm]{ubi_pov_gap_10pct.png}
 \captionof{figure}{}
 \label{fig:ubi_pov_gap_10pct}
 \end{center}
@@ -223,7 +249,7 @@ Given 10 percent income losses, the UBI amount needed to stabilize the poverty g
 This translates to a total cost of about a third lower, though the core finding from the poverty rate analysis---that including everyone is cheaper than restricting receipt---holds for the poverty gap as well.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_cost_pov_gap_10pct.png}
+\includegraphics[width=15cm]{ubi_cost_pov_gap_10pct.png}
 \captionof{figure}{}
 \label{fig:ubi_cost_pov_gap_10pct}
 \end{center}
@@ -231,7 +257,7 @@ This translates to a total cost of about a third lower, though the core finding 
 The UBI amount is about a third lower than the poverty rate case across the range of potential income drops.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_pov_gap.png}
+\includegraphics[width=15cm]{ubi_pov_gap.png}
 \captionof{figure}{}
 \label{fig:ubi_pov_gap}
 \end{center}
@@ -239,7 +265,7 @@ The UBI amount is about a third lower than the poverty rate case across the rang
 Distributing the UBI to everyone is also more cost-effective regardless of the income drop, though the differences are smaller than in the poverty rate case.
 
 \begin{center}
-\includegraphics[width=15cm]{../charts/ubi_cost_pov_gap.png}
+\includegraphics[width=15cm]{ubi_cost_pov_gap.png}
 \captionof{figure}{}
 \label{fig:ubi_cost_pov_gap}
 \end{center}
@@ -247,6 +273,9 @@ Distributing the UBI to everyone is also more cost-effective regardless of the i
 
 
 \clearpage
+
+%\singlespacing
+%\setlength\bibsep{0pt}
 
 \bibliographystyle{apacite}  % We choose the "plain" reference style.
 \bibliography{refs}  % Entries are in the "refs.bib" file.
