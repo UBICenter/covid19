@@ -3,6 +3,7 @@
 \usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,ulem,graphicx,caption,color,setspace,sectsty,comment,footmisc,caption,pdflscape,subfigure,array,hyperref,authblk}
 \usepackage{makecell}
 \usepackage{apacite}
+\usepackage{algorithm,algorithmic}
 \usepackage [english]{babel}
 \usepackage [autostyle, english = american]{csquotes}
 \MakeOuterQuote{"}
@@ -122,6 +123,31 @@ I report the SPM poverty rate, defined as the population share living in SPM uni
 I simulate reductions in households' resource levels likely to arise from the economic downturn, and annual UBI amounts---which could be lump-sum or spread across multiple payments---required to offset any resulting rises in the SPM poverty level. A poverty-stabilizing UBI amount is identified for each of 120 scenarios, defined as the Cartesian product of (a) 20 income reductions (between 1 and 20 percent, in 1-percent increments), (b) whether non-citizens are included, and (c) the amount children receive relative to adults (zero, half, and full).
 
 For example, given a 10 percent reduction in SPM resources and a UBI for every person (including citizens and a full share for children), I calculate the poverty rate for many UBI amounts until one is found that leaves the poverty rate within a small tolerance of its current value. For each scenario like this one, I apply a binary search algorithm~\cite{binary_search} to identify the poverty-stabilizing UBI amount, with tolerances of 0.01 percent for the poverty rate and \$100,000 for the poverty gap.
+
+\begin{algorithm}
+	\caption{Calculate $y = x^n$}
+	\begin{algorithmic}
+		\REQUIRE $n \geq 0 \vee x \neq 0$
+		\ENSURE $y = x^n$
+		\STATE $y \leftarrow 1$
+		\IF{$n < 0$}
+		\STATE $X \leftarrow 1 / x$
+		\STATE $N \leftarrow -n$
+		\ELSE
+		\STATE $X \leftarrow x$
+		\STATE $N \leftarrow n$
+		\ENDIF
+		\WHILE{$N \neq 0$}
+		\IF{$N$ is even}
+		\STATE $X \leftarrow X \times X$
+		\STATE $N \leftarrow N / 2$
+		\ELSE[$N$ is odd]
+		\STATE $y \leftarrow y \times X$
+		\STATE $N \leftarrow N - 1$
+		\ENDIF
+		\ENDWHILE
+	\end{algorithmic}
+\end{algorithm}
 
 I've published my code on GitHub as a Python Jupyter notebook~\cite{notebook}.
 
